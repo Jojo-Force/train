@@ -1,15 +1,22 @@
-:root {
-    --green: hsl(75, 94%, 57%);
-    --white: hsl(0, 0%, 100%);
-    --grey-700: hsl(0, 0%, 20%);
-    --grey-800: hsl(0, 0%, 12%);
-    --grey-900: hsl(0, 0%, 8%);
+@import "tailwindcss";
+@tailwind base;
+
+@theme{
+    --color-*: initial;
+    --color-green: hsl(75, 94%, 57%);
+    --color-white: hsl(0, 0%, 100%);
+    --color-grey-700: hsl(0, 0%, 20%);
+    --color-grey-800: hsl(0, 0%, 12%);
+    --color-grey-900: hsl(0, 0%, 8%);
+    --font-display: "Inter", sans-serif;
+   --breakpoint-sm: 375px;
+  --breakpoint-lg: 1000px;
 }
 
 /* Regular (400) */
 @font-face {
-    font-family: 'Inter';
-    src: url('./assets/fonts/static/Inter-Regular.ttf') format('truetype');
+    font-family: "Inter";
+    src: url("./assets/fonts/static/Inter-Regular.ttf") format("truetype");
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -17,8 +24,8 @@
 
 /* SemiBold (600) */
 @font-face {
-    font-family: 'Inter';
-    src: url('./assets/fonts/static/Inter-SemiBold.ttf') format('truetype');
+    font-family: "Inter";
+    src: url("./assets/fonts/static/Inter-SemiBold.ttf") format("truetype");
     font-weight: 600;
     font-style: normal;
     font-display: swap;
@@ -26,8 +33,8 @@
 
 /* Bold (700) */
 @font-face {
-    font-family: 'Inter';
-    src: url('./assets/fonts/static/Inter-Bold.ttf') format('truetype');
+    font-family: "Inter";
+    src: url("./assets/fonts/static/Inter-Bold.ttf") format("truetype");
     font-weight: 700;
     font-style: normal;
     font-display: swap;
@@ -37,18 +44,29 @@ html {
     /* font-size: 10px; */
     /* 10px / 16px = 0.625 = 62.5%*/
     /* 使用百分比尊重用户，他们可以动态调整窗口默认的大小
-       我们的字体大小是默认大小的62.5%
-    */
+         我们的字体大小是默认大小的62.5%
+      */
     font-size: 62.5%;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/*.link:link,*/
+/*.link:visited {*/
+/*  display: inline-block;*/
+/*  width: 80%;*/
+/*  height: 3.5rem;*/
+/*  background-color: var(--grey-700);*/
+/*  color: var(--white);*/
+/*  text-align: center;*/
+/*  line-height: 2.5rem;*/
+/*  border-radius: 0.8rem;*/
+/*  padding: 0.5rem 0;*/
+/*  font-weight: 600;*/
+/*}*/
 
-/*body{*/
+.link {
+  @apply bg-grey-700 text-white hover:bg-green active:bg-green hover:text-grey-800 active:text-grey-800 inline-block h-14 w-4/5 rounded-[0.8rem] py-2 text-center font-semibold lg:font-normal;
+}
+/*body {*/
 /*    display: flex;*/
 /*    flex-direction: column;*/
 /*    align-items: center;*/
@@ -73,15 +91,15 @@ html {
 /*    border-radius: 0.8rem;*/
 /*}*/
 
-/*.attribution {*/
-/*    font-size: 11px;*/
-/*    text-align: center;*/
-/*    color: var(--white);*/
-/*}*/
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    color: var(--white);
+}
 
-/*.attribution a {*/
-/*    !*color: hsl(228, 45%, 44%);*!*/
-/*}*/
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
 
 /*.avatar {*/
 /*    width: 8rem;*/
