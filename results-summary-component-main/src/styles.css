@@ -1,0 +1,200 @@
+:root {
+  /*### Primary*/
+  --Light-red: hsl(0, 100%, 67%);
+  --Light-red-bg: hsl(0, 100%, 90%);
+  --Orangey-yellow: hsl(39, 100%, 56%);
+  --Orangey-yellow-bg: hsl(39, 100%, 90%);
+  --Green-teal: hsl(166, 100%, 37%);
+  --Green-teal-bg: hsl(166, 100%, 90%);
+  --Cobalt-blue: hsl(234, 85%, 45%);
+  --Cobalt-blue-bg: hsl(234, 85%, 90%);
+
+  /*## Gradients*/
+  --Light-slate-blue-background: hsl(252, 100%, 67%);
+  --Light-royal-blue-background: hsl(241, 81%, 54%);
+  --Violet-blue-circle: hsla(256, 72%, 46%, 1);
+  --Persian-blue-circle: hsla(241, 72%, 46%, 0);
+
+  /*### Neutral*/
+  --white: hsl(0, 0%, 100%);
+  --Pale-blue: hsl(221, 100%, 96%);
+  --Light-lavender: hsl(241, 100%, 89%);
+  --Dark-gray-blue: hsl(224, 30%, 27%);
+}
+
+@font-face {
+  font-family: "Figtree";
+  src: url("./assets/fonts/static/HankenGrotesk-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Figtree";
+  src: url("./assets/fonts/static/HankenGrotesk-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Figtree";
+  src: url("./assets/fonts/static/HankenGrotesk-ExtraBold.ttf")
+    format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+  /* font-size: 10px; */
+  /* 10px / 16px = 0.625 = 62.5%*/
+  /* 使用百分比尊重用户，他们可以动态调整窗口默认的大小
+     我们的字体大小是默认大小的62.5%
+  */
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-size: 1.8rem;
+  background-color: var(--Light-lavender);
+}
+
+.container-result {
+  background: linear-gradient(
+    0deg,
+    var(--Light-royal-blue-background),
+    var(--Light-slate-blue-background)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 2rem;
+  width: 30rem;
+  height: 60rem;
+}
+
+.container-summary {
+  background-color: var(--white);
+  width: 30rem;
+  height: 60rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.your-result {
+  color: var(--Light-lavender);
+}
+
+.score {
+  color: var(--white);
+}
+
+.of-score {
+  color: var(--Dark-gray-blue);
+}
+
+.result {
+  color: var(--white);
+}
+
+.detail {
+  color: var(--Light-lavender);
+}
+
+.summary {
+  color: var(--Dark-gray-blue);
+  align-self: flex-start;
+}
+
+.bar {
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .bar__item {
+  }
+  .bar__score {
+    color: var(--Dark-gray-blue);
+  }
+
+  .bar__score__score {
+    color: var(--Light-lavender);
+  }
+}
+
+.bar:nth-child(1) {
+  background-color: var(--Light-red-bg);
+  .bar__item {
+    color: var(--Light-red);
+  }
+  .bar__score {
+  }
+
+  .bar__score__score {
+  }
+}
+
+.bar:nth-child(2) {
+  background-color: var(--Orangey-yellow-bg);
+  .bar__item {
+    color: var(--Orangey-yellow);
+  }
+  .bar__score {
+  }
+
+  .bar__score__score {
+  }
+}
+
+.bar:nth-child(3) {
+  background-color: var(--Green-teal-bg);
+  .bar__item {
+    color: var(--Green-teal);
+  }
+  .bar__score {
+  }
+
+  .bar__score__score {
+  }
+}
+
+.bar:nth-child(4) {
+  background-color: var(--Gobalt-blue-bg);
+  .bar__item {
+    color: var(--Cobalt-blue);
+  }
+  .bar__score {
+  }
+
+  .bar__score__score {
+  }
+}
+
+.continue-btn {
+  color: var(--white);
+  width: 80%;
+  padding: 1rem;
+  background: linear-gradient(
+    0deg,
+    var(--Light-royal-blue-background),
+    var(--Light-slate-blue-background)
+  );
+
+  border: none;
+  border-radius: 0.8rem;
+}
