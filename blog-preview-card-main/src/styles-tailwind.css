@@ -1,0 +1,43 @@
+@import "tailwindcss";
+@tailwind base;
+
+@theme {
+  --color-*: initial;
+  --color-yellow: hsl(47, 88%, 63%);
+  --color-white: hsl(0, 0%, 100%);
+  --color-grey-500: hsl(0, 0%, 42%);
+  --color-grey-950: hsl(0, 0%, 7%);
+  --font-display: "Figtree", sans-serif;
+  --breakpoint-sm: 375px;
+  --breakpoint-lg: 1000px;
+  /*--shawdow-3xl:  0.5rem 0.5rem 0 0 hsl(0, 0%, 7%);*/
+}
+
+@font-face {
+  font-family: "Figtree";
+  src: url("./assets/fonts/static/Figtree-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Figtree";
+  src: url("./assets/fonts/static/Figtree-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+  /* font-size: 10px; */
+  /* 10px / 16px = 0.625 = 62.5%*/
+  /* 使用百分比尊重用户，他们可以动态调整窗口默认的大小
+       我们的字体大小是默认大小的62.5%
+    */
+  font-size: 62.5%;
+}
+
+/*.link {*/
+/*  @apply bg-grey-700 hover:bg-green active:bg-green hover:text-grey-800 active:text-grey-800 inline-block h-14 w-4/5 rounded-[0.8rem] py-2 text-center font-semibold text-white lg:font-normal;*/
+/*}*/

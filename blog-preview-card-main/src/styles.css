@@ -1,0 +1,118 @@
+:root {
+  --yellow: hsl(47, 88%, 63%);
+  --white: hsl(0, 0%, 100%);
+  --grey-500: hsl(0, 0%, 42%);
+  --grey-950: hsl(0, 0%, 7%);
+}
+
+@font-face {
+  font-family: "Figtree";
+  src: url("./assets/fonts/static/Figtree-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Figtree";
+  src: url("./assets/fonts/static/Figtree-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+  /* font-size: 10px; */
+  /* 10px / 16px = 0.625 = 62.5%*/
+  /* 使用百分比尊重用户，他们可以动态调整窗口默认的大小
+     我们的字体大小是默认大小的62.5%
+  */
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--yellow);
+  font-size: 1.6rem;
+  font-family: "Inter", sans-serif;
+  min-height: 100vh;
+  gap: 3rem;
+  color: var(--grey-950);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.2rem;
+  padding: 1.2rem;
+  border: 1px solid var(--grey-950);
+  background-color: var(--white);
+  border-radius: 1.5rem;
+  width: 30rem;
+  box-shadow: 0.5rem 0.5rem 0 0 var(--grey-950);
+}
+
+.illustration {
+  border-radius: 1.5rem;
+  width: 100%;
+  margin-bottom: 1.2rem;
+}
+
+.tag {
+  padding: 0.5rem;
+  background-color: var(--yellow);
+  font-weight: 800;
+  font-size: 1.6rem;
+  border-radius: 0.8rem;
+}
+.time {
+  font-weight: 500;
+  font-size: 1.6rem;
+}
+
+.header {
+  font-weight: 800;
+  font-size: 1.8rem;
+}
+
+.detail {
+  font-weight: 500;
+  font-size: 1.6rem;
+  color: var(--grey-500);
+  margin-bottom: 1.2rem;
+}
+
+.photo-box {
+  display: flex;
+  gap: 1.2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.avatar {
+  width: 3.5rem;
+}
+.name {
+  font-weight: 800;
+}
+@media (min-width: 375px) {
+  .container {
+    width: 35rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .container {
+    width: 40rem;
+  }
+}
